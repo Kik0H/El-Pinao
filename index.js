@@ -9,7 +9,7 @@ const client = new Client({
 const prefix = "!";
 const fs = require("fs");
 client.commands = new Collection();
-const config = require("./config.json");
+//const config = require("./config.json");
 
 //READY
 client.once('ready', () => {
@@ -78,7 +78,7 @@ client.on("messageCreate", message => {
 
 //FELIZ VIERNES
 const CronJob = require('cron').CronJob;
-const job = new CronJob('00 00 00 * * 5', function () {
+const job = new CronJob('00 58 22 * * 5', function () {
     const d = new Date();
     console.log('Feliz Viernes Hermano');
     const guild = client.guilds.cache.get('331530120445689857');
@@ -91,4 +91,4 @@ const job = new CronJob('00 00 00 * * 5', function () {
 
 job.start();
 
-client.login(config.token);
+client.login(process.env.DISCORD_TOKEN);
