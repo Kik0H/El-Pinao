@@ -9,7 +9,7 @@ const client = new Client({
 const prefix = "!";
 const fs = require("fs");
 client.commands = new Collection();
-const config = require("./config.json");
+//const config = require("./config.json");
 
 //READY
 client.once('ready', () => {
