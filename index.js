@@ -78,7 +78,7 @@ client.on("messageCreate", message => {
 
 //FELIZ VIERNES
 const CronJob = require('cron').CronJob;
-const job = new CronJob('00 58 22 * * 5', function () {
+const job = new CronJob('00 15 23 * * 5', function () {
     const d = new Date();
     console.log('Feliz Viernes Hermano');
     const guild = client.guilds.cache.get('331530120445689857');
