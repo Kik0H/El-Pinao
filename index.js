@@ -9,7 +9,7 @@ const client = new Client({
 const prefix = "!";
 const fs = require("fs");
 client.commands = new Collection();
-//const config = require("./config.json");
+const config = require("./config.json");
 
 //READY
 client.once('ready', () => {
@@ -91,4 +91,4 @@ const job = new CronJob('00 00 00 * * 5', function () {
 
 job.start();
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(config.token);
