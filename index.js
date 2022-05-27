@@ -91,4 +91,4 @@ const job = new CronJob('00 00 00 * * 5', function () {
 
 job.start();
 
-client.login(config.token);
+client.login(process.env.DISCORD_TOKEN);
